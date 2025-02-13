@@ -50,7 +50,7 @@ h1 {
 }
 
 .button-wrapper {
-  height: 60px; 
+  height: 60px;
   width: 16rem;
   display: flex;
   justify-content: center;
@@ -116,5 +116,4 @@ h1 {
 }
 
 .temp-screen {
-
 }

@@ -79,11 +79,20 @@ function App() {
 
   useEffect(() => {
     let timer;
+
     if (showCelebration && countdown > 0) {
       timer = setInterval(() => {
         setCountdown((prevCountdown) => prevCountdown - 1);
       }, 1000);
     }
+
+    if (showCelebration) {
+      const audio = document.getElementById("celebration-audio");
+      if (audio) {
+        audio.play();
+      }
+    }
+
     return () => clearInterval(timer);
   }, [showCelebration, countdown]);
 
@@ -146,6 +155,8 @@ function App() {
   if (showCelebration) {
     return (
       <div className="celebration-container">
+        <audio id="celebration-audio" src="/Multiply.mp3" />
+
         <div className="celebration-content">
           <h1>Yay! 🎉</h1>
           <img src="/gifs/cat2.gif" alt="Celebration Cat" className="gif" />
