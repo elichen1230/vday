@@ -1,5 +1,6 @@
 {
   "name": "my-react-app",
+  "homepage": "https://elichen1230.github.io/vday",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
